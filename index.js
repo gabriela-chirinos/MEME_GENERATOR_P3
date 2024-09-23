@@ -44,6 +44,7 @@ const bottomTextOverlay = document.createElement('p');
 bottomTextOverlay.classList.add('bottomTextOverlay');
 
 
+
 //Image container
 
 const imageContainer = document.getElementById('imageContainer');
@@ -104,8 +105,8 @@ function generateMeme() {
         bottomTextOverlay.textContent = bottomText;
 
 
-        memeContainer.appendChild(topTextOverlay);
-        memeContainer.appendChild(bottomTextOverlay);
+        imageContainer.appendChild(topTextOverlay);
+        imageContainer.appendChild(bottomTextOverlay);
 
 
       }
