@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="style.CSS">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MEME GENERATOR </title>
+</head>
+<body>
+
+   
+
+    <div id="container">
+
+        <h1 class="memePlaceholder"> Meme Generator</h1>
+        <p class="memoPlaceholder"> 'Just here for the snacks'</p>
+        
+        <form id="meme_form"> 
+            <label for="image_url">Image URL: </label><br>
+            <input type="text" id="image_url" name="image_url"><br><br>
+
+            <label for="top_text">Top Text:</label><br>
+            <input type="text" id="top_text"  name="top_text"><br><br>
+
+            <label for="bottom_text">Bottom Text:</label><br>
+            <input type="text" id="bottom_text"  name="bottom_text"><br><br>
+           
+
+            <button type="button" id="generate_button">Generate Meme Here</button> 
+        </form>
+
+        <div id="imageContainer">
+            <img  src="" id="meme_image" alt="MEME IMAGE" >
+        </div>
+       
+    </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>

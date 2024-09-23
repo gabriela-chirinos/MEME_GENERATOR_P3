@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:#FEFEE3;
+}
+
+h1{
+    font-size: 4rem;
+    margin: 40px auto;
+}
+
+p{
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto;
+    width: 80%;
+    border: 25px solid red;
+    height: fit-content;
+   
+   
+}
+
+
+#imageContainer {
+    display: flex;
+    border: 5px blue solid;
+    width:75%;
+    height: 30em;
+    align-self: center;
+    order: 3;
+    margin-bottom: 8em;
+    position: relative;
+
+    
+}
+
+#meme_form{
+ 
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    width: 50%;
+    margin: 5em auto;
+
+}
+
+
+
+#generate_button { 
+    background-color: #FCFCFD;
+    margin: 2em auto;
+    border-radius: 10px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    height: 3em;
+    width: 13em;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+  
+}
+
+
+
+
+
+#meme_image {
+  margin: 5% auto;
+  border: 2px red solid;
+  height: 80%;
+  width: fit-content;
+  
+}
+
+
+
+.topTextOverlay,.bottomTextOverlay {
+  border: 4px solid orange;
+  position: absolute;
+  top: 10% /* Adjust as needed */
+  left: 0;
+  right: 0;
+  width: fit-content;
+  text-align: center;
+  color: red;
+  font-family: Impact, sans-serif;
+  margin: 10 auto;
+  z-index: 99;
+  padding: 5px; /* Add some padding */
+  font-size: 100px;
+}
+
+
+
+
+
