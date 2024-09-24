@@ -13,18 +13,21 @@
 
     <div id="container">
 
-        <h1 class="memePlaceholder"> Meme Generator</h1>
-        <p class="memoPlaceholder"> 'Just here for the snacks'</p>
+
+        
         
         <form id="meme_form"> 
+           
+            <div class="title">Welcome</div>
+            <div class="subtitle">Let's make a Meme!</div>
             <label for="image_url">Image URL: </label><br>
-            <input type="text" id="image_url" name="image_url"><br><br>
+            <input type="text" id="image_url"  class="image_url input" placeholder=" Enter URL"><br><br>
 
             <label for="top_text">Top Text:</label><br>
-            <input type="text" id="top_text"  name="top_text"><br><br>
+            <input  id="top_text" type="text"  class="input" name="top_text" placeholder=" Text"><br><br>
 
             <label for="bottom_text">Bottom Text:</label><br>
-            <input type="text" id="bottom_text"  name="bottom_text"><br><br>
+            <input type="text" id="bottom_text"   class="input"name="bottom_text" placeholder=" Text"><br><br>
            
 
             <button type="button" id="generate_button">Generate Meme Here</button> 

@@ -2,42 +2,75 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color:#f6f6f6;
+   
 }
 
-h1{
+body{
+    background: linear-gradient(to right, #b6e8fe, #fdb9ff, #79d7ff,#fec3ff);
+    font-family: 'Poppins', sans-serif;
+}
+    
+
+
+
+.title{
+    color: #000000;
+    font-family: sans-serif;
     font-size: 4rem;
-    margin: 40px auto;
+    margin-top: 10px;
+    color: #000000;
+    text-align: center;
 }
 
-p{
-    margin: 0 auto;
+.subtitle{
+    color: #000000;
     font-size: 2rem;
-    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
 }
+
+
 
 #container {
-    display: flex;
+    display: flex;  
     flex-direction: column;
     margin: 5% auto;
-    width: 80%;
-    border: 25px solid red;
-    height: fit-content;
-   
+    width: 80vw;
+    height: 100vh;
    
 }
 
 
 
+
+.input{
+
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 10px;
+    line-height: 1;
+    line-height: 50px;
+
+   
+}
 
 #meme_form{
  
     display: flex;
     flex-direction: column;
-    order: 2;
     width: 50%;
     margin: 5em auto;
-
+    width: 35vw;
+    height: fit-content;
+    padding:30px;
+    background: linear-gradient(to left, #afd7ff, rgb(254, 208, 254), rgb(241, 241, 241));
+  
+  
 }
 
 
@@ -67,31 +100,25 @@ p{
 
 
 
-
 #meme_image {
   margin: 5% auto;
-  border: 2px red solid;
   height: 80%;
-  width: fit-content;
+  width: 80%;
   
 }
 
 
 #imageContainer {
-    display: flex;
-    border: 5px blue solid;
-    width:75%;
-    height: 30em;
-    align-self: center;
-    order: 3;
-    margin-bottom: 8em;
-    position: relative;
+    
+    height: 45vh;
+    width: 45vw;
     text-align: center;
-    color: #ffffff;
     text-shadow: 2px 2px 0px #281616;
     font: 2rem;
- 
-
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     
 }
 
@@ -100,18 +127,16 @@ p{
   position: absolute;
   width: fit-content;
   margin: 0 auto;
-  margin: 10 auto;
+  bottom: 36%;
   z-index: 99;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 40%;
   background: none;
  
 }
 .bottomTextOverlay{
     bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40%;
+   
     position: absolute;
     width: fit-content;
     margin: 0 auto;

@@ -5,16 +5,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 const memeContainer = document.getElementById('container');
 
 
-//header
-const memePlaceholder = document.querySelector('h1');
-
-
-//memo 
-
-const memoPlaceholder = document.querySelector('p');
-
-
-
 //Image
 const memeImage = document.getElementById('meme_image'); 
 
@@ -54,9 +44,6 @@ const imageContainer = document.getElementById('imageContainer');
 
 //append container
 
-
-memeContainer.appendChild(memePlaceholder);
-memeContainer.appendChild(memoPlaceholder);
 imageContainer.appendChild(memeImage);
 
  // Append the text elements to the image container
@@ -115,7 +102,6 @@ function generateMeme() {
 
   memeImage.onerror = () => {
       alert('Failed to load image. Please check the URL. ');
-
 
       // adding text to image
 
