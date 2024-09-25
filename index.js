@@ -28,8 +28,6 @@ const bottomTextInput = document.getElementById('bottom_text');
 const topTextOverlay = document.createElement('p');
 topTextOverlay.classList.add('topTextOverlay'); 
 
-
-
 const bottomTextOverlay = document.createElement('p');
 bottomTextOverlay.classList.add('bottomTextOverlay');
 
@@ -40,6 +38,14 @@ bottomTextOverlay.classList.add('bottomTextOverlay');
 const imageContainer = document.getElementById('imageContainer');
 
 
+//form
+
+const memeForm = document.getElementById('meme_form');
+
+
+// Error message
+
+const errorElement = document.getElementsByClassName('error');
 
 
 //append container
@@ -47,7 +53,8 @@ const imageContainer = document.getElementById('imageContainer');
 imageContainer.appendChild(memeImage);
 
  // Append the text elements to the image container
-
+ imageContainer.appendChild(topTextOverlay);
+ imageContainer.appendChild(bottomTextOverlay);
 
 
 // Local Storage - Not clearing
@@ -60,19 +67,21 @@ if (storedURL) {
 }
 
 
+
 //Click event
 const generateButton = document.getElementById('generate_button');
 generateButton.addEventListener('click',generateMeme);
+
+
+
 
 
 // Generate meme
 
 function generateMeme() {
 
-
       let imageURL = urlInput.value;
     
-
       memeImage.src = imageURL;
       
        // Store the image URL in session storage
@@ -81,8 +90,6 @@ function generateMeme() {
       //append image to container
       imageContainer.appendChild(memeImage);
 
-    
-
       memeImage.onload = () => {
 
         const topText = topTextInput.value;
@@ -90,23 +97,67 @@ function generateMeme() {
 
         topTextOverlay.textContent = topText;
         bottomTextOverlay.textContent = bottomText;
-
-
-        imageContainer.appendChild(topTextOverlay);
-        imageContainer.appendChild(bottomTextOverlay);
-
+       
+        checkAndDisplayText();
 
       }
 
-  
 
-  memeImage.onerror = () => {
-      alert('Failed to load image. Please check the URL. ');
+      function checkAndDisplayText() {
+        if (memeImage.src === "" ) {
+          // Image hasn't loaded or is invalid
+          
+          imageContainer.innerHTML = "Just create your meme!"; 
+      }
 
-      // adding text to image
-
-    };
   };
+
+
+  memeForm.addEventListener('submit', (e) =>  {
+    e.preventDefault(); // Prevent submission 
+  
+    // Trim off white space
+    const imageURL = urlInput.value.trim(); 
+    const topText = topTextInput.value.trim();
+    const bottomText = bottomTextInput.value.trim();
+
+
+
+   // Check URL Field
+
+   if(!imageURL){
+    errorElement[0].textContent = 'Please enter a valid url: ';
+    return;
+   }
+
+   // Check if URL is valid
+
+   const isValid = imageURL.match(/\.(jpeg|jpg|png)$/) != null;
+
+   if(!isValid){
+   errorElement[0].textContent = 'Please enter a valid image URL ending with .jpg or .png';
+    return;
+   }
+
+   // CHeck if all fields are empty 
+
+   if(!imageURL && !topText && !bottomText){
+    errorElement.textContent = 'Please fill out at least one field. ';
+    return;
+   }
+
+   // Check URL field is not empty when text field has content. 
+
+   if (!imageURL &&( topText || bottomText)){
+    errorElement[0].textContent = 'Please enter an image URL.';
+    return;
+   }
+   
+    generateMeme();
+  });
+
+ 
+  
 
 })
 

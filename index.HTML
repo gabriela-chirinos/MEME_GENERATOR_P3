@@ -13,28 +13,28 @@
 
     <div id="container">
 
-
-        
         
         <form id="meme_form"> 
            
             <div class="title">Welcome</div>
             <div class="subtitle">Let's make a Meme!</div>
+            <div class="error"></div>
             <label for="image_url">Image URL: </label><br>
-            <input type="text" id="image_url"  class="image_url input" placeholder=" Enter URL"><br><br>
-
+            <input type="text"   id="image_url"  class="image_url input" placeholder=" Enter URL" required ><br><br>
+            
+            <div class="error"></div>
             <label for="top_text">Top Text:</label><br>
-            <input  id="top_text" type="text"  class="input" name="top_text" placeholder=" Text"><br><br>
+            <input  id="top_text" type="text"   class="input" name="top_text" placeholder=" Text" required><br><br>
 
             <label for="bottom_text">Bottom Text:</label><br>
-            <input type="text" id="bottom_text"   class="input"name="bottom_text" placeholder=" Text"><br><br>
+            <input type="text" id="bottom_text"    class="input"name="bottom_text" placeholder=" Text" ><br><br>
            
 
-            <button type="button" id="generate_button">Generate Meme Here</button> 
+            <button type="submit" id="generate_button">Generate Meme Here</button> 
         </form>
 
         <div id="imageContainer">
-            <img  src="" id="meme_image" alt="MEME IMAGE" >
+            <img  src="" id="meme_image" alt="MEME IMAGE"  >
         </div>
        
     </div>

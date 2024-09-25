@@ -6,7 +6,7 @@
 }
 
 body{
-    background: linear-gradient(to right, #b6e8fe, #fdb9ff, #79d7ff,#fec3ff);
+    background: linear-gradient(to top, #F4F1EB, #c1e0f4);
     font-family: 'Poppins', sans-serif;
 }
     
@@ -16,6 +16,7 @@ body{
 .title{
     color: #000000;
     font-family: sans-serif;
+    font-weight: bold;
     font-size: 4rem;
     margin-top: 10px;
     color: #000000;
@@ -25,6 +26,7 @@ body{
 .subtitle{
     color: #000000;
     font-size: 2rem;
+    font-weight: bold;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
@@ -68,9 +70,11 @@ body{
     width: 35vw;
     height: fit-content;
     padding:30px;
-    background: linear-gradient(to left, #afd7ff, rgb(254, 208, 254), rgb(241, 241, 241));
+    background: linear-gradient(to bottom, #afd7ff, rgb(254, 208, 254), rgb(241, 241, 241));
   
-  
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+    
 }
 
 
@@ -97,7 +101,10 @@ body{
   
 }
 
+label{
+font-size: 18px;
 
+}
 
 
 #meme_image {
@@ -106,6 +113,8 @@ body{
   width: 80%;
   
 }
+
+
 
 
 #imageContainer {
@@ -118,8 +127,7 @@ body{
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin: 0 auto;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;    
 }
 
 
@@ -127,7 +135,7 @@ body{
   position: absolute;
   width: fit-content;
   margin: 0 auto;
-  bottom: 36%;
+  bottom: 16%;
   z-index: 99;
   left: 40%;
   background: none;
@@ -146,4 +154,9 @@ body{
 }
 
 
-
+.error {
+    position: relative;
+    color: red; 
+    font-size: 10px;
+   
+  }
