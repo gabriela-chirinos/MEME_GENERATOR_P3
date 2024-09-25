@@ -103,14 +103,7 @@ function generateMeme() {
       }
 
 
-      function checkAndDisplayText() {
-        if (memeImage.src === "" ) {
-          // Image hasn't loaded or is invalid
-          
-          imageContainer.innerHTML = "Just create your meme!"; 
-      }
-
-  };
+    
 
 
   memeForm.addEventListener('submit', (e) =>  {
@@ -156,14 +149,7 @@ function generateMeme() {
     generateMeme();
   });
 
- 
-  
+
+}
 
 })
-
-
-
-
-
-
-
